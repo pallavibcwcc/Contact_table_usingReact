@@ -1,4 +1,4 @@
-table {
+.mainTable {
   width: 400px;
   height: 100px;
 text-align: center;
@@ -6,9 +6,9 @@ border: 2px solid brown;
 
 }
 
-th{
+.heading{
   border: 2px solid blue;
 }
- td{
+ .data{
   border: 2px solid green;
  }

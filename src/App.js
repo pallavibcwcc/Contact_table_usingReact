@@ -22,21 +22,21 @@ function App () {
 
   return (
     <div>
-      <table>
+      <table className='mainTable'>
         <thead>
           <tr>
-            <th>Day</th>
-            <th>Subject</th>
-            <th>Time</th>
+            <th className="heading">Day</th>
+            <th className="heading">Subject</th>
+            <th className="heading">Time</th>
           </tr>
           </thead>
           <tbody>
             {
             tableData.map((val, i) => 
               <tr key={i}>
-                <td>{val.day}</td>
-                <td>{val.subject}</td>
-                <td>{val.time}</td>
+                <td className="data">{val.day}</td>
+                <td className="data">{val.subject}</td>
+                <td className="data">{val.time}</td>
               </tr>
             )
             }
