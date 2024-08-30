@@ -1,7 +1,10 @@
 // import React from 'react';
+import {useState} from 'react'
  import './App.css';
 
 function App () {
+  const [search,setSearch] = useState('')
+  console.log(search);
   const tableData = [
     {
       day: "Monday",
@@ -22,6 +25,7 @@ function App () {
 
   return (
     <div>
+      <input  className="inputbtn" placeholder="search day" onChange= {(e) => setSearch(e.target.value)}/>
       <table className='mainTable'>
         <thead>
           <tr>
@@ -31,8 +35,13 @@ function App () {
           </tr>
           </thead>
           <tbody>
-            {
-            tableData.map((val, i) => 
+            {tableData
+            .filter ((item) => {
+              return search.toLowerCase() === ''
+              ?item
+              :item.day.toLowerCase().includes(search);
+            })
+            .map((val, i) => 
               <tr key={i}>
                 <td className="data">{val.day}</td>
                 <td className="data">{val.subject}</td>

@@ -1,8 +1,14 @@
+
+
+
 .mainTable {
+  margin-top: 40px;
   width: 400px;
   height: 100px;
 text-align: center;
 border: 2px solid brown;
+
+
 
 }
 
@@ -11,4 +17,13 @@ border: 2px solid brown;
 }
  .data{
   border: 2px solid green;
+ }
+ .inputbtn{
+  width: 400px;
+  margin-top: 40px;
+text-align: center;
+border: 2px solid brown;
+ }
+ .tbody{
+  justify-content: center;
  }
